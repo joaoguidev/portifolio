@@ -154,7 +154,7 @@ header span {
 }
 .photoProject3{
     grid-area:photoProject3; 
-    background-image: url(../images/addmein.png); 
+    background-image: url(../images/portfolioPic.png); 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -162,7 +162,7 @@ header span {
 }
 .photoProject4{
     grid-area:photoProject4; 
-    background-image: url(../images/portfolioPic.png); 
+    background-image: url(../images/addmein.png); 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
