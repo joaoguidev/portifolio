@@ -1,0 +1,14 @@
+Student: Joao Dantas
+SID: 100292405
+
+
+I want my audience to fell joy and happyness. The audience of this project is small children.
+Initially I was going to do a site where you could click on landscape photos and have a relaxing experience with sound and landscape videos. 
+I decided to change my audience to children because I found good material for it so i changed.
+I chose the fonts that looks handwritten. Similar to what you would find on board games. 
+I tried to keep the visual identity clean and visually appealing at the same time. 
+As soon as you enter the site you are presented with a landing page with a brief video that reveals the purpose of the project getting the user curious. 
+The icons are large to instigate the user to click it and when he/she does there is a rewarding sound of a music box and the clicked animal spins reinforcing the notion that something of relevance happened. 
+The Animal image gradually fades and in its place the animal video and sound appears. When the video ends the animal image reappears gracefully.
+
+

@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+html {
+    font-family: 'Indie Flower', cursive;
+    overflow: hidden;
+}
+body{
+    position: relative;
+    margin: 0;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.langingPageLines {
+    
+    width: 100%;    
+    height: 50vh;
+    margin-top: 30vh;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+h1 {
+    font-size: 5rem;
+    color: aliceblue;
+}
+
+#langingPageFade{
+    width: 100%;    
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    animation-name: langingPageFade;
+    animation-duration: 3s;
+    animation-delay: 9s;
+}
+
+
+
+
+/* --------------------------------------------------Animations--------------------------------------------------- */
+
+@keyframes langingPageFade {
+    
+    0%{
+        background-color: rgba(0, 0, 0, 0);
+    }   
+    100%{
+        background-color: rgba(0, 0, 0, 1);
+    }
+}
+
+.landongPageLineOne {
+    opacity: 0%; 
+    display: inline-block;
+    animation-name: landingPageLineOne;
+    animation-duration: 3s;
+    
+}
+@keyframes landingPageLineOne {
+    
+    0%{
+        opacity: 0%; 
+        transform: translate(0%,100%);
+         /* transform: scaleY(0); */
+         /* transform scale property: https://www.w3schools.com/css/css3_2dtransforms.asp */ 
+    }   
+    50%{
+        opacity: 100%;
+        transform: translate(30%,50%);
+         /* transform: scaleY(1); */
+         /* transform scale property: https://www.w3schools.com/css/css3_2dtransforms.asp */ 
+    }
+    100%{
+        opacity: 0%;
+        transform: translate(60%,0%);
+        /* transform: scaleY(1);transform scale property: https://www.w3schools.com/css/css3_2dtransforms.asp */
+    }
+}
+.landongPageLineTwo {
+    opacity: 0%; 
+    display: inline-block;
+    animation-name: landingPageLineTwo;
+    animation-delay: 3s;
+    animation-duration: 3s;
+}
+@keyframes landingPageLineTwo {
+    
+    0%{
+        opacity: 0%; 
+        transform: translate(0%,100%);
+         /* transform: scaleY(0); */
+         /* transform scale property: https://www.w3schools.com/css/css3_2dtransforms.asp */ 
+    }   
+    50%{
+        opacity: 100%;
+        transform: translate(30%,50%);
+         /* transform: scaleY(1); */
+         /* transform scale property: https://www.w3schools.com/css/css3_2dtransforms.asp */ 
+    }
+    100%{
+        opacity: 0%;
+        transform: translate(60%,0%);
+        /* transform: scaleY(1);transform scale property: https://www.w3schools.com/css/css3_2dtransforms.asp */
+    }
+}
+.landongPageLineThree {
+    opacity: 0%; 
+    display: inline-block;
+    animation-name: landongPageLineThree;
+    animation-delay: 6s;
+    animation-duration: 3s;
+
+}
+@keyframes landongPageLineThree {
+    
+    0%{
+        opacity: 0%; 
+        transform: translate(0%,100%);
+         /* transform: scaleY(0); */
+         /* transform scale property: https://www.w3schools.com/css/css3_2dtransforms.asp */ 
+    }   
+    50%{
+        opacity: 100%;
+        transform: translate(30%,50%);
+         /* transform: scaleY(1); */
+         /* transform scale property: https://www.w3schools.com/css/css3_2dtransforms.asp */ 
+    }
+    100%{
+        opacity: 0%;
+        transform: translate(60%,0%);
+        /* transform: scaleY(1);transform scale property: https://www.w3schools.com/css/css3_2dtransforms.asp */
+    }
+}

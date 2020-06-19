@@ -1,0 +1,580 @@
+/* Joao Dantas 100292405 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+
+}
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7)), url(../images/light.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+#navBar li{
+    display: inline;
+}
+#navBar li a{
+    text-decoration: none;
+    float: right;
+    margin-top: 5px;
+    margin-right: 30px;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.5rem;
+}
+header{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+header h1 {
+    color: white;
+    font-weight: 300;
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+}
+header span {
+    color: #f8204b;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 20vh;
+    grid-template-areas: 
+    "header nav nav"
+    "mainIndex mainIndex mainIndex"
+    ;
+}
+.header{
+    grid-area: header;
+}
+.nav{
+    grid-area: nav;   
+}
+.mainIndex{
+    grid-area: mainIndex;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 50vh 30vh;
+    grid-template-areas: 
+    " . "
+    " paragCenterIndex "
+    ;
+}
+.paragCenterIndex {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.paragCenterIndex p{
+    grid-area: paragCenterIndex;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 300; 
+}
+.paragCenterIndex p a{
+    grid-area: paragCenterIndex;
+    font-size: 3rem;
+    color: #ff3442;
+    text-align: center;
+    font-weight: 400; 
+    text-decoration: none;
+}
+/* --------------------------About Me------------------------------------------ */
+.mainAboutMe{
+    grid-area: mainIndex;
+    display: grid;
+    grid-template-columns: 1fr 400px 400px 1fr;
+    grid-template-rows: 550px;
+    grid-template-areas: 
+    ". textAboutMe photoAboutMe ."
+    ;
+}
+.photoAboutMe{
+    grid-area: photoAboutMe;
+    background-image: url(../images/person.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.textAboutMe {
+    grid-area: textAboutMe;
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+}
+.textAboutMe p {
+    font-size: 1.8em;
+    font-weight: 300;
+    text-align: left;
+    line-height: 44px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+/* -------------------------------Projects----------------------------------------- */
+.mainProjects{
+    grid-area: mainIndex;
+    display: grid;
+    grid-column-gap: 5vw;
+    grid-row-gap:5vw;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 30vh 30vh;
+    grid-template-areas: 
+    ". photoProject1 photoProject2 ."
+    ". photoProject3 photoProject4 ."
+    ;
+}
+.photoProject1{
+    grid-area:photoProject1;
+    background-image: url(../images/moonLander.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-decoration: none;
+}
+.photoProject2{
+    grid-area:photoProject2; 
+    background-image: url(../images/kidsSite.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-decoration: none;
+}
+.photoProject3{
+    grid-area:photoProject3; 
+    background-image: url(../images/addmein.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-decoration: none;
+}
+.photoProject4{
+    grid-area:photoProject4; 
+    background-image: url(../images/portfolioPic.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-decoration: none;
+}
+.photoProject1:hover p{
+    display: none;
+}
+.photoProject2:hover p{
+    display: none;
+}
+.photoProject3:hover p{
+    display: none;
+}
+.photoProject4:hover p{
+    display: none;  
+}
+.projectDescrip {
+    width: 100%;
+    height: 15vh;
+    margin-top: 15vh;
+    color: white;
+    font-weight: 300;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    padding-left: 1vw;
+    padding-top: 1vw;
+    background-color: rgba(0,0,0, 0.9);
+}
+/* -------------------------------Gallery----------------------------------------- */
+.mainGallery{
+    grid-area: mainIndex;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-areas: 
+    ". photoProject1 ."
+    ; */
+}
+ img {
+    margin: 0 auto;
+  }
+
+/* -------------------------------Editing----------------------------------------- */
+.mainEditing{
+    grid-area: mainIndex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". iframe ."
+    ;
+}
+iframe{
+    grid-area:iframe;
+
+}
+
+
+/* -----------------------------Contact------------------------------- */
+
+.mainContacts{
+    grid-area: mainIndex;
+    display: grid;
+    grid-template-columns: 1fr 300px 300px 1fr;
+    grid-template-rows: 90px 500px;
+    grid-template-areas: 
+    ". phoneField emailField ."
+    ". formContact formContact ."
+
+    ;
+}
+.formContact{
+    grid-area: formContact;
+    color: #ffffff;
+}
+
+.phoneField{
+    grid-area: phoneField;
+    color: #ffffff;
+    background-color: rgba(0,0,0, 0.4);
+    border-radius: 5px;
+}
+.emailField{
+    grid-area: emailField;
+    color: #ffffff;
+    background-color: rgba(0,0,0, 0.4);
+    border-radius: 5px;
+}
+
+
+.phoneField legend{
+    font-size: 3rem;
+    text-align: center;
+    color: #f8204b;
+}
+.phoneField span{
+    font-size: 3rem;
+    display: block;
+    text-align: center;
+    font-weight: 100;
+}
+.emailField span{
+    font-size: 3rem;
+    display: block;
+    text-align: center;
+    font-weight: 300;
+}
+
+.emailField legend{
+    font-size: 3rem;
+    text-align: center;
+    color: #f8204b;
+}
+
+
+.formContact fieldset{
+    
+    padding-left: 4vw;
+    padding-right: 4vw;
+    border-radius: 5px;
+    background-color: rgba(0,0,0, 0.4);
+}
+.formContact fieldset p{
+    font-size: 2em;
+}
+.formContact fieldset legend{
+    font-size: 3rem;
+    text-align: center;
+    color: #f8204b;
+}
+.formContact fieldset label{
+    font-size: 1.4rem;
+}
+.formContact fieldset input{
+    width: 100%;
+    margin-bottom: 3vh;
+    padding: 0.2vh;
+    border-radius: 5px;
+    font-size: 2rem;
+}
+.formContact fieldset textarea{
+    width: 100%;
+    font-size: 2rem;
+}
+.formContact button{
+    margin-top: 2.5vh;
+    border: 5px solid #f8204c;
+    background-color:#f8204b;
+    color: white;
+    font-size: 2rem;
+    margin-left: 40%;
+    margin-right: 60%;
+}
+
+.formContact i{
+    position: relative;
+    color: #f8204b;
+    margin-right: 5px;
+}
+
+@media only screen and (max-width:1024px){
+    body{
+        background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7)), url(../images/light.jpeg); 
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    #navBar li{
+        display: inline;
+    }
+    #navBar li a{
+        text-decoration: none;
+        float: right;
+        margin-top: 5px;
+        margin-right: 30px;
+        border: 2px solid white;
+        padding: 10px;
+        border-radius: 20px;
+        color: white;
+        font-size: 1.5rem;
+    }
+    header{
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+    header h1 {
+        color: white;
+        font-weight: 300;
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+        margin-left: 20vw;
+    }
+    header span {
+        color: #f8204b;
+        font-weight: 700;
+        font-size: 2.5rem;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr ;
+        grid-template-rows: 10vh 15vh;
+        grid-template-areas: 
+        ". header ."
+        ". nav ."
+        "mainIndex mainIndex mainIndex"
+        ;
+    }
+    .header{
+        grid-area: header;
+    }
+    .nav{
+        grid-area: nav;
+        
+    }
+    .mainIndex{
+        grid-area: mainIndex;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 80vh;
+        grid-template-areas: 
+        " paragCenterIndex "
+        ;
+    }
+    .paragCenterIndex p{
+        grid-area: paragCenterIndex;
+        font-size: 3rem;
+        color: white;
+        text-align: center;
+        line-height: 50px;
+        font-weight: 300; 
+    }
+    .paragCenterIndex p a{
+        grid-area: paragCenterIndex;
+        font-size: 3rem;
+        color: #F3930F;
+        text-align: center;
+        font-weight: 400; 
+        text-decoration: none;
+    }
+} 
+@media only screen and (max-width:768px){
+    
+    #navBar li a{
+        margin-right: 1vw;
+        font-size: 1.5rem;
+    }
+    .grid {
+        grid-template-areas: 
+        ". header ."
+        ". nav ."
+        "mainIndex mainIndex mainIndex"
+        ;
+    }
+    /* --------------------------About Me------------------------------------------ */
+    .mainAboutMe{
+        grid-template-rows: 40vh 30vh;
+        grid-template-areas: 
+        ". photoAboutMe photoAboutMe ."
+        ". textAboutMe textAboutMe ."
+        ;
+    }
+    .photoAboutMe{
+        background-position: 50% 30%;
+    }
+
+    .textAboutMe p {
+        font-size: 1.8rem;
+        padding-top: 5vh;
+    }
+    /* -------------------------------Projects----------------------------------------- */
+    .mainProjects{
+        grid-template-columns: 1fr 4fr 4fr 1fr;
+    }
+    
+    /* -----------------------------Contact------------------------------- */
+    
+    .formContact fieldset legend{
+        margin-bottom: 3vh;
+    }
+    .formContact button{
+        margin-top: 5vh;
+        margin-left: 30%;
+    }
+}
+@media only screen and (max-width:760px){
+    * {
+        font-size: 10px;
+    }
+    #navBar li{
+        display: block;
+        clear: both;  
+    }
+    #navBar li a{
+        border-radius: 5px;
+        width: 98%;
+        margin-right: 1%;
+    }
+    header{
+        margin-left: 0;
+    }
+    header h1 {
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr ;
+        grid-template-rows: 10vh;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "mainIndex"
+        ;
+    }
+    .header{
+        grid-area: header;
+    }
+    .nav{
+        grid-area: nav;   
+    }
+    .mainIndex{
+        grid-template-rows: 50vh;
+    }
+    .paragCenterIndex p{
+        line-height: 10vh;
+        margin-top: 10vh;
+    }
+    .paragCenterIndex p a{
+        line-height: 10vh;
+    }
+    
+    /* --------------------------About Me------------------------------------------ */
+    .mainAboutMe{
+        grid-area: mainIndex;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 600px 300px;
+        grid-template-areas: 
+        "textAboutMe"
+        "photoAboutMe"
+        ;
+    }
+    .photoAboutMe{
+        grid-area: photoAboutMe;
+        background-size: contain;
+        display: block;
+    }
+    .textAboutMe {
+        grid-area: textAboutMe;
+        display: block;
+        background-color: rgba(0,0,0, 0.6);
+        color: white;
+    }
+    .textAboutMe p {
+        font-size: 1.7rem;
+        padding-top: 50px;
+        text-align: justify;
+    }
+    /* -------------------------------Projects----------------------------------------- */
+    .mainProjects{
+        grid-row-gap:5vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50vh 50vh 50vh 50vh;
+        grid-template-areas: 
+        "photoProject2"
+        "photoProject1"
+        "photoProject3" 
+        "photoProject4"
+        ;
+    }
+    
+    .projectDescrip {
+        height: 25vh;
+        margin-top: 25vh;
+        font-size: 1.8rem;
+        background-color: rgba(0,0,0, 0.6);
+    }
+    
+    /* -----------------------------Contact------------------------------- */
+    
+    .mainContacts{
+        grid-area: mainIndex;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 90px 90px;
+        grid-template-areas: 
+        "emailField"
+        "phoneField"
+        "formContact"
+        ;
+    }
+
+    .formContact fieldset{
+        background-color: rgba(0,0,0, 0.4);
+    }
+    .formContact fieldset legend{
+        font-size: 3rem;
+        text-align: center;
+        color: #f8204b;
+    }
+    .formContact fieldset label{
+        font-size: 1.4rem;
+    }
+    .formContact fieldset input{
+        width: 100%;
+        margin-bottom: 3vh;
+        padding: 0.2vh;
+    }
+
+    .formContact button{
+        font-size: 2rem;
+        margin-left: 40%;
+        margin-right: 60%;
+    }
+}

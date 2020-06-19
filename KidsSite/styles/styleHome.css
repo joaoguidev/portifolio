@@ -1,0 +1,266 @@
+/* Student: Joao Dantas
+SID:100292405 */
+
+
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Shadows+Into+Light&display=swap');
+
+body {
+    margin: 0;
+    background-color: #f7f5f1;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+a {
+    text-decoration: none;
+    color: tomato;
+}
+
+.overlayMedia {
+    /* got help here for the overlay : https://www.w3schools.com/howto/howto_css_overlay.asp */
+    display: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* --------------------------------------grid of the primary structure of the page------------------------ */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5vh 4vh 86vh 2vh 3vh;
+    grid-template-areas:
+        "header credits"
+        ". ."
+        "main main"
+        /* This was further arranged with a grid. see bellow */
+        ". ."
+        "footer footer"
+    ;
+}
+
+.header {
+    grid-area: header;
+    /* background-color: pink; */
+    padding-left: 10px;
+    font-size: 1.3em;
+    color: tomato;
+    font-family: 'Permanent Marker', cursive;
+    border-bottom: 3px solid orangered
+}
+
+.credits {
+    grid-area: credits;
+    /* background-color: grey; */
+    font-size: 1.3em;
+    font-family: 'Permanent Marker', cursive;
+    border-bottom: 3px solid orangered;
+    text-align: right;
+    padding-right: 10px;
+    text-decoration: none;
+
+}
+
+.footer {
+    grid-area: footer;
+    /* background-color: pink; */
+    text-align: center;
+    font-size: 0.6em;
+}
+
+/* -----------------------------------------main elements grid------------------------------------ */
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 40vh 40vh 1fr;
+    grid-template-rows: 5vh 40vh 40vh;
+    gap: 1vh;
+    grid-template-areas:
+        ". instruction instruction ."
+        ". topLeft topRight ."
+        ". bottomLeft bottomRight ."
+    ;
+}
+
+.instruction {
+    grid-area: instruction;
+    /* background-color: blueviolet; */
+    color: blueviolet;
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.6em;
+
+
+}
+
+#topLeft {
+    grid-area: topLeft;
+    border-radius: 3px;
+    cursor: pointer;
+    animation-name: loadAnimation;
+    animation-duration: 3s;
+}
+
+#topRight {
+    grid-area: topRight;
+    border-radius: 3px;
+    cursor: pointer;
+    animation-name: loadAnimation;
+    animation-duration: 3s;
+}
+
+#bottomLeft {
+    grid-area: bottomLeft;
+    border-radius: 3px;
+    cursor: pointer;
+    animation-name: loadAnimation;
+    animation-duration: 3s;
+}
+
+#bottomRight {
+    grid-area: bottomRight;
+    border-radius: 3px;
+    cursor: pointer;
+    animation-name: loadAnimation;
+    animation-duration: 3s;
+}
+
+
+
+/*--------------------------------------------- animation frames--------------------------------------------------------------- */
+
+@keyframes loadAnimation {
+
+    0% {
+        opacity: 0%;
+        /* transform scale property: https://www.w3schools.com/css/css3_2dtransforms.asp */
+    }
+
+    100% {
+        opacity: 100%;
+        /* transform scale property: https://www.w3schools.com/css/css3_2dtransforms.asp */
+    }
+
+}
+
+
+
+
+.enterAnimation {
+    /* opacity: 0%;  */
+    animation-name: enterAnimation;
+    animation-duration: 3s;
+}
+
+@keyframes enterAnimation {
+
+    0% {
+        opacity: 100%;
+        transform: rotate(0deg);
+        /* transform scale property: https://www.w3schools.com/css/css3_2dtransforms.asp */
+    }
+
+    100% {
+        opacity: 0%;
+
+        transform: rotate(360deg);
+        /* transform scale property: https://www.w3schools.com/css/css3_2dtransforms.asp */
+    }
+
+}
+
+.exitAnimation {
+    /* opacity: 0%;  */
+    animation-name: exitAnimation;
+    animation-duration: 3s;
+}
+
+@keyframes exitAnimation {
+
+    0% {
+        opacity: 0%;
+        transform: rotate(0deg);
+        /* transform scale property: https://www.w3schools.com/css/css3_2dtransforms.asp */
+    }
+
+    100% {
+        opacity: 100%;
+
+        transform: rotate(-360deg);
+        /* transform scale property: https://www.w3schools.com/css/css3_2dtransforms.asp */
+    }
+
+}
+
+
+/* ----------------------------------------Responsive Smaller Devices media query------------------ */
+@media only screen and (max-width: 1024px) {
+    .grid {
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vh 10vh;
+        grid-template-areas:
+            "header "
+            "credits"
+            "main"
+            "."
+            "footer"
+        ;
+    }
+
+    .header {
+        grid-area: header;
+        text-align: center;
+        padding-left: 0px;
+        color: azure;
+        background-color: orangered;
+    }
+
+    .header span {
+        position: relative;
+        top: 20%;
+
+    }
+
+    .credits {
+        grid-area: credits;
+        text-align: center;
+        padding-right: 0px;
+        text-decoration: none;
+        padding-top: 2%;
+
+    }
+
+    .main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5vh;
+        row-gap: 15vh;
+        grid-template-areas:
+            "instruction"
+            "topLeft"
+            "topRight"
+            "bottomLeft"
+            "bottomRight"
+        ;
+    }
+
+    .instruction {
+        grid-area: instruction;
+        padding-top: 10vh;
+        text-align: center;
+        font-size: 2em;
+    }
+
+}
